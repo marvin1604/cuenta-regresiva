@@ -5,8 +5,13 @@
 }
 :root{
     --back-color : #212121;
-    --white : #ffffff;
+    --white : #e9e6e6;
     --black : #00000;
+    --naranja : #F28A2E;
+    --white-gray: #D9CBA0;
+    --skyblue: #9AC7D9;
+    --blue-fuerte: #6A8FA6;
+    --blue : #5F94D9;
 }
 
 html{
@@ -14,22 +19,37 @@ html{
 
 }
 body{
-    background-color: var(--back-color);
+    background-color: var(--white);
     font-family: sans-serif;
-    color: var(--white);    
+    color:  var(--back-color);    
     display: flex;
     justify-content: center;
     align-items: center;
 }
 h1{
     font-size: 3.0rem;
+    margin-bottom: 12px;
+    color: var(--blue-fuerte);
+}
+
+h2{
+    font-size: 2.0rem;
 }
 p{
     font-size: 1.5rem;
 }
+button{
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+}
+button:hover{
+cursor: pointer;
+}
 section{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     max-width: 1000px;
     display: flex;
     flex-direction: column;
@@ -37,17 +57,39 @@ section{
     align-items: center;
     text-align: center;
 }
+
+section .container-fecha{
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    
+}
+section .container-fecha span{
+    padding-left: 10px;
+}
+section span:nth-child(3){
+    font-weight: bold;
+}
+
+section .fecha-hora{
+    font-size: 2.2rem;
+}
 section .container-cuenta{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px;
+    margin: 10px;
 }
 .container-box{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 1px solid gray;
+    border: 1px solid var(--blue-fuerte);
+    box-shadow: 3px 3px 2px var(--blue-fuerte);
     padding: 5px;
     margin: 10px;
     width: 100px;
@@ -55,11 +97,74 @@ section .container-cuenta{
     text-align: center;
 }
 .container-box span{
-    font-size: 4rem;
+    font-size: 6rem;
+}
+.stop{
+    background-color: red;
+    box-shadow: 3px 3px 2px rgb(143, 40, 40);
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: 300px;
+    margin: 12px;
+    padding: 8px;
+}
+.container-fecha-choise{
+    flex-direction: column;
+    justify-content: center;
 }
 
-@media (min-width: 600px){
-    section .container{
+.container-fecha-choise p{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.container-fecha-choise input{
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    color: var(--blue-fuerte);
+}
+.container-fecha-choise .fecha-manual button{
+    background: rgb(166, 219, 85);
+    box-shadow: 3px 3px 2px rgb(125, 161, 71);
+    
+}
+.fecha-manual{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+.container-fecha-choise button{
+    background: rgb(205, 38, 38);
+    box-shadow: 3px 3px 2px rgb(143, 40, 40);
+    margin: 4px;
+}
+.container-fecha-choise .halloween{
+    background: rgb(0,0,0);
+    box-shadow: 3px 3px 2px rgb(0,0,0, 0.5);
+    margin: 4px;
+    color: white;
+}
+.container-fecha-choise .año-nuevo{
+    background: yellow;
+    box-shadow: 3px 3px 2px rgb(175, 175, 32);
+    margin: 4px;
+    color: black;
+}
+/* .imagen{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+} */
 
+
+
+@media (min-width: 600px){
+    section{
+        width: 100%;
+        height: 100vh;
     }
 }

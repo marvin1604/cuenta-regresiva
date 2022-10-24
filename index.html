@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="./src/styles.css">
     <title>CUENTA REGRESIVA</title>
 </head>
-<body>
+<body id="body">
     <section>
-        <h1>CUENTA REGRESIVA PARA TU EVENTO</h1>
-        <h2>Fecha actual:</h2>
-        <span  id="fecha-actual"></span>
-        <span id="hora-actual">00:00:00</span>
+        <h1>CUENTA REGRESIVA PARA TU DIA ESPECIAL</h1>
+        <div class="container-fecha">
+            <h2>Fecha actual:</h2>
+            <span id="fecha-actual" class="fecha-hora"></span>            
+        </div>
+        <span id="hora-actual" class="fecha-hora">00:00:00</span>
         
-        <div class="container-cuenta">
+        <h2>¿Cuanto Falta para mi dia especial?</h2>
+        <div class="container-cuenta">            
             <div class="container-box">
                 <p>MESES</p>
                 <span class="container-number" id="month">0</span>
@@ -36,10 +39,21 @@
                 <span class="container-number" id="seconds">0</span>
             </div>
         </div>
+        <button class="stop">Parar Cuenta REGRESIVA</button>
 
-        <div class="container-fecha">
-            <button class="navidad" value='Dec 25 2022 00:00:00'>Navidad</button>
+        <div class="container-fecha-choise">
+            <form id="fecha-manual" >
+                <div class="fecha-manual">
+                    <p>Ingresa tu dia especial </p>
+                    <input type="datetime-local" id="date-time" placeholder="">
+                    <button type="button" id="button-date-time">Iniciar</button>
+                </div>
+            </form>
+            <p>Selecciona una fecha especial</p>
+            <button type="button" class="navidad" value='Dec 25 2022 00:00:00'>Navidad</button>
             <button class="halloween" value='Oct 31 2022 00:00:00'>Halloween</button>
+            <button class="año-nuevo" value='Jan 01 2023 00:00:00'>Año Nuevo</button>
+            <div class="imagen"></div>
         </div>
 
     </section>
