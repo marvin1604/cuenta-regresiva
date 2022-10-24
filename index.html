@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>CUENTA REGRESIVA</title>
+</head>
+<body>
+    <section>
+        <h1>CUENTA REGRESIVA PARA TU EVENTO</h1>
+        <h2>Fecha actual:</h2>
+        <span  id="fecha-actual"></span>
+        <span id="hora-actual">00:00:00</span>
+        
+        <div class="container-cuenta">
+            <div class="container-box">
+                <p>MESES</p>
+                <span class="container-number" id="month">0</span>
+            </div>
+            <div class="container-box">
+                <p>DIAS</p>
+                <span class="container-number" id="days">0</span>
+            </div>
+            <div class="container-box">
+                <p>HORAS</p>
+                <span class="container-number" id="hours">0</span>
+            </div>
+            <div class="container-box">
+                <p>MINUTOS</p>
+                <span class="container-number" id="minutes">0</span>
+            </div>
+            <div class="container-box">
+                <p>SEGUNDOS</p>
+                <span class="container-number" id="seconds">0</span>
+            </div>
+        </div>
+
+        <div class="container-fecha">
+            <button class="navidad" value='Dec 25 2022 00:00:00'>Navidad</button>
+            <button class="halloween" value='Oct 31 2022 00:00:00'>Halloween</button>
+        </div>
+
+    </section>
+
+    <script src="./src/index.js"></script>
+    
+</body>
+</html>
